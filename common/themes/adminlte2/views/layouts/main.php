@@ -39,6 +39,8 @@ if (Yii::$app->controller->action->id === 'login') {
         <link rel="shortcut icon" href="<?= $directoryNtlAsset ?>/img/ntl/favicon_ntl_16.ico" type="image/x-icon" />
         <?php $this->head() ?>
 
+        <?php $this->registerCssFile($directoryNtlAsset . "/css/layouts/main.css"); ?>
+
         <script>
             var AdminLTEOptions = {
                 sidebarExpandOnHover: false,
