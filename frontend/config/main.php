@@ -12,10 +12,6 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
 
-    'aliases'=>[
-        '@themeFrontend' => '@frontend/themes/adminlte2',
-    ],
-
     'components' => [
         'user' => [
             'identityClass' => 'common\models\User',
@@ -39,7 +35,7 @@ return [
         'view' => [
             'theme' => [
                 'pathMap' => [
-                    '@app/views' => '@themeFrontend/views'
+                    '@app/views' => '@theme/views'
                 ],
             ],
         ],
