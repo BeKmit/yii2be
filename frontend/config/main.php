@@ -11,6 +11,11 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+
+    'aliases'=>[
+        '@themeFrontend' => '@frontend/themes/adminlte2',
+    ],
+
     'components' => [
         'user' => [
             'identityClass' => 'common\models\User',
@@ -34,7 +39,7 @@ return [
         'view' => [
             'theme' => [
                 'pathMap' => [
-                    '@app/views' => '@frontend/themes/adminlte2'
+                    '@app/views' => '@themeFrontend/views'
                 ],
             ],
         ],
