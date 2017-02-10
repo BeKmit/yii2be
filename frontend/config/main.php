@@ -43,6 +43,13 @@ return [
                 ],
             ],
         ],
+
+        'urlManagerBackend' => [
+            'class' => 'yii\web\urlManager',
+            'baseUrl' => '//backend.ntl.dev',
+            'showScriptName' => false,
+            'enablePrettyUrl' => true,
+        ],
     ],
 
     'modules' => [
