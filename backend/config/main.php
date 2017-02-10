@@ -40,5 +40,13 @@ return [
             ],
         ],
     ],
+
+    'modules' => [
+        # warrence/yii2-kartikgii
+        'gridview' => [
+            'class' => 'kartik\grid\Module',
+        ],
+    ],
+
     'params' => $params,
 ];
