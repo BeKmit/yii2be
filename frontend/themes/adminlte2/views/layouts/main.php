@@ -40,6 +40,11 @@ if (Yii::$app->controller->action->id === 'login') {
         <?php $this->head() ?>
 
         <?php $this->registerCssFile($directoryNtlAsset . "/css/layouts/main.css"); ?>
+        <?php
+        if (in_array(yii::$app->controller->action->id, ['create','view'])) {
+            $this->registerCssFile($directoryNtlAsset . "/css/layouts/form-kartik-detailview.css");
+        }
+        ?>
 
         <script>
             var AdminLTEOptions = {

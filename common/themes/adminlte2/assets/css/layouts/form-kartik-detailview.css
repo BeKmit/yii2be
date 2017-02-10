@@ -1,0 +1,18 @@
+/**
+ * For KarTik@DetailView [Page: form]
+ */
+
+.kv-col-label {
+  width: 15%;
+  text-align: right;
+  vertical-align: middle;
+}
+.kv-col-value1 {
+  width: 85%;
+}
+.kv-col-value2 {
+  width: 35%;
+}
+.kv-attribute {
+  word-break: break-word;
+}
