@@ -1,3 +1,16 @@
+<?php
+$itemModules = array();
+foreach (Yii::$app->params['linkOnHome'] as $moduleId => $show) {
+    if ($show == true) {
+        $itemModules[] = [
+            'label' => ucwords($moduleId),
+            'icon' => 'glyphicon glyphicon-circle-arrow-right',
+            'url' => '/' . $moduleId,
+            'visible' => !Yii::$app->user->isGuest,
+        ];
+    }
+}
+?>
 <aside class="main-sidebar">
 
     <section class="sidebar">
@@ -17,36 +30,19 @@
         <?= dmstr\widgets\Menu::widget(
             [
                 'options' => ['class' => 'sidebar-menu'],
-                'items' => [
-                    ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
-                    ['label' => 'Debug', 'icon' => 'fa fa-dashboard', 'url' => ['/debug']],
-                    ['label' => 'Login', 'icon' => 'glyphicon glyphicon-log-in', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
+                'items' => array_merge(
                     [
-                        'label' => 'Same tools',
-                        'icon' => 'fa fa-share',
-                        'url' => '#',
-                        'items' => [
-                            ['label' => 'Debug', 'icon' => 'fa fa-dashboard', 'url' => ['/debug'],],
-                            [
-                                'label' => 'Level One',
-                                'icon' => 'fa fa-circle-o',
-                                'url' => '#',
-                                'items' => [
-                                    ['label' => 'Level Two', 'icon' => 'fa fa-circle-o', 'url' => '#',],
-                                    [
-                                        'label' => 'Level Two',
-                                        'icon' => 'fa fa-circle-o',
-                                        'url' => '#',
-                                        'items' => [
-                                            ['label' => 'Level Three', 'icon' => 'fa fa-circle-o', 'url' => '#',],
-                                            ['label' => 'Level Three', 'icon' => 'fa fa-circle-o', 'url' => '#',],
-                                        ],
-                                    ],
-                                ],
-                            ],
+                        ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
+                        ['label' => 'Debug', 'icon' => 'fa fa-dashboard', 'url' => ['/debug'], 'visible' => YII_ENV == 'dev'],
+                        [
+                            'label' => 'Login',
+                            'icon' => 'glyphicon glyphicon-log-in',
+                            'url' => ['site/login'],
+                            'visible' => Yii::$app->user->isGuest
                         ],
                     ],
-                ],
+                    $itemModules
+                ),
             ]
         ) ?>
 
