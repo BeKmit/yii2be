@@ -35,7 +35,7 @@ if (Yii::$app->controller->action->id === 'login') {
         <meta charset="<?= Yii::$app->charset ?>"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?= Html::csrfMetaTags() ?>
-        <title><?= Html::encode($this->title) ?></title>
+        <title><?= Html::encode(Yii::$app->params['appName'] . ': ' . $this->title) ?></title>
         <link rel="shortcut icon" href="<?= $directoryNtlAsset ?>/img/ntl/favicon_ntl_16.ico" type="image/x-icon" />
         <?php $this->head() ?>
 

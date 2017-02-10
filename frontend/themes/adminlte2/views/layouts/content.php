@@ -12,6 +12,9 @@ use dmstr\widgets\Alert;
                 <?php
                 if ($this->title !== null) {
                     echo \yii\helpers\Html::encode($this->title);
+                    if (!empty($this->params['pageDesc'])) {
+                        echo '<small>' . $this->params['pageDesc'] . '</small>';
+                    }
                 } else {
                     echo \yii\helpers\Inflector::camel2words(
                         \yii\helpers\Inflector::id2camel($this->context->module->id)

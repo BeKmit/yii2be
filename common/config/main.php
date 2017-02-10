@@ -2,6 +2,8 @@
 return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
 
+    // 'language' => 'en-US',
+
     'aliases'=>[
         '@themeCommon' => '@common/themes/adminlte2',
     ],
