@@ -6,7 +6,12 @@ return [
 
     'aliases'=>[
         '@common.theme' => '@common/themes/adminlte2',
+        '@common.uploadPath' => '@common/uploads',
+        '@common.uploadUrl' => '//localhost/yii2be/common/uploads',
+
         '@app.theme' => '@app/themes/adminlte2',
+        '@app.uploadPath' => '@app/web/uploads',
+        '@app.uploadUrl' => '/uploads',
     ],
 
     'components' => [
