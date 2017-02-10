@@ -2,13 +2,17 @@
 return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
 
+    'aliases'=>[
+        '@themeCommon' => '@common/themes/adminlte2',
+    ],
+
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
 
         'urlManager' => [
-            'class' => 'yii\web\UrlManager',
+            'class' => 'yii\web\urlManager',
             # Disable index.php
             'showScriptName' => false,
             # Disable r= routes
