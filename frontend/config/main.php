@@ -35,7 +35,7 @@ return [
         'view' => [
             'theme' => [
                 'pathMap' => [
-                    '@app/views' => '@theme/views'
+                    '@app/views' => '@app.theme/views'
                 ],
             ],
         ],

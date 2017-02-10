@@ -18,7 +18,7 @@ dmstr\web\AdminLteAsset::register($this);
     <?php $this->head() ?>
 
     <?php
-        $directoryNtlAsset = Yii::$app->assetManager->getPublishedUrl('@themeCommon/assets');
+        $directoryNtlAsset = Yii::$app->assetManager->getPublishedUrl('@common.theme/assets');
     ?><link rel="shortcut icon" href="<?= $directoryNtlAsset ?>/img/ntl/favicon_ntl_16.ico" type="image/x-icon" />
     <link href="<?= $directoryNtlAsset ?>/css/site/login.css" rel="stylesheet">
 </head>

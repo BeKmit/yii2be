@@ -5,8 +5,8 @@ return [
     // 'language' => 'en-US',
 
     'aliases'=>[
-        '@themeCommon' => '@common/themes/adminlte2',
-        '@theme' => '@app/themes/adminlte2',
+        '@common.theme' => '@common/themes/adminlte2',
+        '@app.theme' => '@app/themes/adminlte2',
     ],
 
     'components' => [

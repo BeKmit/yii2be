@@ -26,7 +26,7 @@ if (Yii::$app->controller->action->id === 'login') {
     common\themes\adminlte2\NtlAdminLteAsset::register($this);
 
     $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
-    $directoryNtlAsset = Yii::$app->assetManager->getPublishedUrl('@themeCommon/assets');
+    $directoryNtlAsset = Yii::$app->assetManager->getPublishedUrl('@common.theme/assets');
     ?>
     <?php $this->beginPage() ?>
     <!DOCTYPE html>
@@ -56,7 +56,7 @@ if (Yii::$app->controller->action->id === 'login') {
     <div class="wrapper">
 
         <?= $this->render(
-            '@themeCommon/views/layouts/header.php',
+            '@common.theme/views/layouts/header.php',
             ['directoryAsset' => $directoryAsset, 'directoryNtlAsset' => $directoryNtlAsset]
         ) ?>
 

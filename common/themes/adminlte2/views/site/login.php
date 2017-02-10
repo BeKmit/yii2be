@@ -18,7 +18,7 @@ $fieldOptions2 = [
     'inputTemplate' => "{input}<span class='glyphicon glyphicon-lock form-control-feedback'></span>"
 ];
 
-$directoryNtlAsset = Yii::$app->assetManager->getPublishedUrl('@themeCommon/assets');
+$directoryNtlAsset = Yii::$app->assetManager->getPublishedUrl('@common.theme/assets');
 ?>
 
 <div class="login-box">

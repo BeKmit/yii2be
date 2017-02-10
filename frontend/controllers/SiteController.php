@@ -90,8 +90,8 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
-            $this->layout = "@themeCommon/views/layouts/main-login";
-            return $this->render('@themeCommon/views/site/login', [
+            $this->layout = "@common.theme/views/layouts/main-login";
+            return $this->render('@common.theme/views/site/login', [
                 'model' => $model,
             ]);
         }

@@ -35,15 +35,15 @@ return [
         'view' => [
             'theme' => [
                 'pathMap' => [
-                    '@app/views' => '@theme/views'
+                    '@app/views' => '@app.theme/views'
                 ],
             ],
         ],
 
-        'urlManagerFrontend' => [
+        'urlManagerISource' => [
             'class' => 'yii\web\urlManager',
-            'baseUrl' => $params['protocol'] . '://' . $params['domain.main'],
-            'hostInfo' => $params['protocol'] . '://' . $params['domain.main'],
+            'baseUrl' => $params['protocol'] . '://' . $params['domain.iSource'],
+            'hostInfo' => $params['protocol'] . '://' . $params['domain.iSource'],
             'showScriptName' => false,
             'enablePrettyUrl' => true,
         ],

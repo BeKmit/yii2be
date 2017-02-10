@@ -10,7 +10,7 @@ use yii\web\AssetBundle;
  */
 class NtlAdminLteAsset extends AssetBundle
 {
-    public $sourcePath = '@themeCommon/assets';
+    public $sourcePath = '@common.theme/assets';
     public $css = [
         'css/skins/skin-ntl-light.min.css',
     ];
