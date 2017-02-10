@@ -5,9 +5,9 @@ use yii\helpers\Html;
 /* @var $content string */
 
 
-if (Yii::$app->controller->action->id === 'login') { 
+if (Yii::$app->controller->action->id === 'login') {
 /**
- * Do not use this code in your template. Remove it. 
+ * Do not use this code in your template. Remove it.
  * Instead, use the code  $this->layout = '//main-login'; in your controller.
  */
     echo $this->render(
@@ -23,8 +23,10 @@ if (Yii::$app->controller->action->id === 'login') {
     }
 
     dmstr\web\AdminLteAsset::register($this);
+    common\themes\adminlte2\NtlAdminLteAsset::register($this);
 
     $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
+    $directoryNtlAsset = Yii::$app->assetManager->getPublishedUrl('@themeCommon/assets');
     ?>
     <?php $this->beginPage() ?>
     <!DOCTYPE html>
@@ -34,15 +36,28 @@ if (Yii::$app->controller->action->id === 'login') {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?= Html::csrfMetaTags() ?>
         <title><?= Html::encode($this->title) ?></title>
+        <link rel="shortcut icon" href="<?= $directoryNtlAsset ?>/img/ntl/favicon_ntl_16.ico" type="image/x-icon" />
         <?php $this->head() ?>
+
+        <?php //$this->registerCssFile("http://ntl.dev/../themes/adminlte2/dist/css/skin-ntl-light.css"); ?>
+
+        <script>
+            var AdminLTEOptions = {
+                sidebarExpandOnHover: false,
+                // BoxRefresh Plugin
+                enableBoxRefresh: true,
+                // Bootstrap.js tooltip
+                enableBSToppltip: true
+            };
+        </script>
     </head>
-    <body class="skin-blue sidebar-mini">
+    <body class="skin-ntl-light sidebar-mini sidebar-collapse">
     <?php $this->beginBody() ?>
     <div class="wrapper">
 
         <?= $this->render(
-            'header.php',
-            ['directoryAsset' => $directoryAsset]
+            '@themeCommon/views/layouts/header.php',
+            ['directoryAsset' => $directoryAsset, 'directoryNtlAsset' => $directoryNtlAsset]
         ) ?>
 
         <?= $this->render(
@@ -57,7 +72,6 @@ if (Yii::$app->controller->action->id === 'login') {
         ) ?>
 
     </div>
-
     <?php $this->endBody() ?>
     </body>
     </html>

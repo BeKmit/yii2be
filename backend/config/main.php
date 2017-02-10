@@ -9,9 +9,13 @@ $params = array_merge(
 return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
-    'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'controllerNamespace' => 'backend\controllers',
+
+    'aliases'=>[
+        '@themeBackend' => '@backend/themes/adminlte2',
+    ],
+
     'components' => [
         'user' => [
             'identityClass' => 'common\models\User',
@@ -35,7 +39,7 @@ return [
         'view' => [
             'theme' => [
                 'pathMap' => [
-                    '@app/views' => '@backend/themes/adminlte2'
+                    '@app/views' => '@themeBackend/views'
                 ],
             ],
         ],
