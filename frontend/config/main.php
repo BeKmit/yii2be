@@ -42,7 +42,8 @@ return [
 
         'urlManagerBackend' => [
             'class' => 'yii\web\urlManager',
-            'baseUrl' => '//backend.ntl.dev',
+            'baseUrl' => $params['protocol'] . '://' . $params['domain.backend'],
+            'hostInfo' => $params['protocol'] . '://' . $params['domain.backend'],
             'showScriptName' => false,
             'enablePrettyUrl' => true,
         ],
