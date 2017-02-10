@@ -12,15 +12,15 @@
         "irc": "irc://irc.freenode.net/yii",
         "source": "https://github.com/yiisoft/yii2"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": ">=2.0.6",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
         "dmstr/yii2-adminlte-asset": "2.*",
-        "kartik-v/yii2-grid": "@stable",
-        "kartik-v/yii2-mpdf": "@dev"
+        "kartik-v/yii2-mpdf": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
