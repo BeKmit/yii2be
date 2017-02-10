@@ -11,4 +11,6 @@ return [
     'domain.main' => 'yii2be.dev',
     'domain.backend' => 'yii2be.dev',
 
+    # Asset file version (css & js)
+    'assetVer' => '0.0.1',
 ];
