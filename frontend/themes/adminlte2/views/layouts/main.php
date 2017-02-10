@@ -62,8 +62,8 @@ if (Yii::$app->controller->action->id === 'login') {
 
         <?= $this->render((
                 is_file(Yii::getAlias('@app/modules/' . $this->context->module->id . '/views/layouts/left.php'))
-                ? '@app/modules/' . $this->context->module->id . '/views/layouts/left.php'
-                : 'left.php'
+                    ? '@app/modules/' . $this->context->module->id . '/views/layouts/left.php'
+                    : 'left.php'
             ),
             ['directoryAsset' => $directoryAsset]
         )
